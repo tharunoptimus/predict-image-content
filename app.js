@@ -64,8 +64,23 @@ function applyStyleAndShowStatus(show) {
 }
 
 function removePhotoFromFrame () {
-  cameraOutput.classList.remove("taken");
-  cameraOutput.src = "";
+
+
+  requestAnimationFrame(function() {
+    cameraOutput.classList.add("leaveFrame");
+  });
+  
+  updateClass();
+}
+
+async function updateClass() {
+  // cameraOutput.classList.remove("taken");
+
+  setTimeout(function() {
+    cameraOutput.src = "";
+    cameraOutput.classList.remove("taken");
+    cameraOutput.classList.remove("leaveFrame");
+  }, 750);
 }
 
 function changeCurrentTask (ready) {
