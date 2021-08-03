@@ -69,17 +69,19 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0.5rem;
-    background-color: #b2bec3;
+    background-color: white;
     border: 5px solid #636e7252;
     border-radius: 0.5rem;
-    min-width: 65%;
+    /* min-width: 65%; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     z-index: 5;
-    transition: all 0.5s cubic-bezier(0.4, 0, 1, 1);
+    transition: all 0.5s cubic-bezier(1, 0.15, 0, 1.1);
+    min-width: 256px;
+    color: #444444;
 }
 
 .statusSpanClass {

@@ -98,7 +98,7 @@ function changeCurrentTask (ready) {
 }
 
 function showResults(props) {
-    let html = "<div style='margin-bottom: 0.5rem;'>Results:</div><ul class='predictions'>"
+    let html = "<div style='margin-bottom: 0.5rem;'>Picture of a:</div><ul class='predictions'>"
     props.forEach(element => {
       html  += "<li>" + 
                   "<div class='predictionDiv'>" + element.className + "</div>"
