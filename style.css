@@ -82,6 +82,22 @@ body {
     transition: all 0.5s cubic-bezier(0.4, 0, 1, 1);
 }
 
+.statusSpanClass {
+    position: fixed;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 5;
+    transition: all 0.5s cubic-bezier(0.4, 0, 1, 1);
+    top: 28%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+}
+
 .predictions {
     list-style-type: none;
     padding: 0;

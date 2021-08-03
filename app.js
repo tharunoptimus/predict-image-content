@@ -8,8 +8,9 @@ let showingResults = false;
 const cameraView = document.querySelector("#camera--view"),
     cameraOutput = document.querySelector("#camera--output"),
     cameraSensor = document.querySelector("#camera--sensor"),
-    cameraTrigger = document.querySelector("#camera--trigger")
-    predictionSpan = document.querySelector("#prediction")
+    cameraTrigger = document.querySelector("#camera--trigger"),
+    predictionSpan = document.querySelector("#prediction"),
+    statusSpan = document.querySelector("#statusSpan"),
     currentTaskImage = document.querySelector("#currentTask");
 
 // Access the device camera and stream to cameraView
@@ -37,7 +38,12 @@ cameraTrigger.onclick = async function() {
 
     applyStyleAndShowStatus(true);
     let prediction = await predictModal();
+
+    statusSpan.classList.remove("statusSpanClass");
+    statusSpan.innerHTML = '';
+    predictionSpan.classList.add("prediction");
     predictionSpan.innerHTML = showResults(prediction);
+
     changeCurrentTask(false);
     showingResults = true;
   }
@@ -53,9 +59,8 @@ cameraTrigger.onclick = async function() {
 
 function applyStyleAndShowStatus(show) {
   if(show) {
-    // add class to the predictionSpan element without jquery
-    predictionSpan.classList.add("prediction");
-    predictionSpan.innerHTML = "<img src='searching.gif' alt='Scanning'>";
+    statusSpan.classList.add("statusSpanClass");
+    statusSpan.innerHTML = "<img class='searching' src='searching.gif' alt='Scanning'>";
   }
   else {
     predictionSpan.classList.remove("prediction");
