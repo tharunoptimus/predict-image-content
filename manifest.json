@@ -1,0 +1,17 @@
+{
+    "short_name": "Predict",
+    "name": "Predict",
+    "description": "Predict the image captured",
+    "icons": [
+      {
+        "src": "logo512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any maskable"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#ff7f50",
+    "display": "standalone",
+    "theme_color": "#ff7f50"
+  }

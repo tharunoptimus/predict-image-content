@@ -1,5 +1,8 @@
+@font-face{font-family:"sans";src:url(/css/sans.ttf) format("truetype");font-display:swap}
+
 html,
 body {
+    font-family: "sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	margin: 0;
 	padding: 0;
 	height: 100%;
@@ -26,7 +29,7 @@ body {
 #camera--trigger {
 	/* width: 200px; */
 	color: white;
-	font-size: 16px;
+	font-size: 0;
 	border-radius: 50%;
 	border: none;
 	background-color: #57606f;
