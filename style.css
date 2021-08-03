@@ -24,24 +24,25 @@ body {
 }
 
 #camera--trigger {
-	width: 200px;
-	background-color: black;
+	/* width: 200px; */
 	color: white;
 	font-size: 16px;
-	border-radius: 30px;
+	border-radius: 50%;
 	border: none;
-	padding: 15px 20px;
+	background-color: #57606f;
+	padding: 9px;
 	text-align: center;
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
 	position: fixed;
 	bottom: 30px;
-	left: calc(50% - 100px);
+	left: 50%;
+	transform: translate(-50%, -18%);
 }
 
 .taken {
 	height: 200px !important;
 	width: 200px !important;
-	transition: all 0.5s ease-in;
+	transition: all 0.5s cubic-bezier(0, 1.27, 0.89, 0.9);
 	border: solid 3px white;
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
 	top: 35%;
@@ -64,4 +65,5 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    display: none;
 }
