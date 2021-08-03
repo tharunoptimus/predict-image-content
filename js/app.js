@@ -60,7 +60,7 @@ cameraTrigger.onclick = async function() {
 function applyStyleAndShowStatus(show) {
   if(show) {
     statusSpan.classList.add("statusSpanClass");
-    statusSpan.innerHTML = "<img class='searching' src='searching.gif' alt='Scanning'>";
+    statusSpan.innerHTML = "<img class='searching' src='/images/searching.gif' alt='Scanning'>";
   }
   else {
     predictionSpan.classList.remove("prediction");
@@ -90,10 +90,10 @@ async function updateClass() {
 
 function changeCurrentTask (ready) {
   if(ready) {
-    currentTaskImage.src = "search.png";
+    currentTaskImage.src = "/images/search.png";
   }
   else {
-    currentTaskImage.src = "cancel.png";
+    currentTaskImage.src = "/images/cancel.png";
   }
 }
 
