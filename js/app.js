@@ -1,5 +1,5 @@
 // Set constraints for the video stream
-let constraints = { video: { facingMode: "user" }, audio: false };
+let constraints = { video: { facingMode: "environment" }, audio: false };
 let track = null;
 
 let showingResults = false;
